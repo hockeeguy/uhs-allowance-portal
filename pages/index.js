@@ -1,0 +1,1 @@
+import dynamic from "next/dynamic"; const App = dynamic(() => import("../src/AllowanceSelectionApp"), { ssr: false }); export default function Home(){ return <App/> }

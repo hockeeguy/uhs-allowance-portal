@@ -1,0 +1,47 @@
+:root {
+  --brand:#d4af37; /* gold */
+  --ink:#111;
+  --bg:#ffffff;
+  --muted:#f3f4f6;
+}
+html,body { margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#fff; color:var(--ink); }
+.container { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+.grid { display:grid; gap:16px; }
+.header { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.left { display:flex; align-items:center; gap:12px; }
+.logo { width:56px; height:56px; object-fit:contain; border-radius:8px; }
+.brand-title { font-weight:700; font-size: 1.25rem; }
+.card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:16px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.btn { padding:10px 14px; border-radius:10px; border:1px solid #e5e7eb; background:#fff; cursor:pointer; }
+.btn:hover { background:#f9fafb; }
+.btn.brand { background: var(--brand); border-color: var(--brand); color:#111; font-weight:600; }
+.btn.outline { background:#fff; }
+.tabs { display:flex; gap:8px; flex-wrap:wrap; }
+.tab { padding:8px 12px; border:1px solid #e5e7eb; border-radius:999px; cursor:pointer; }
+.tab.active { background:var(--brand); border-color:var(--brand); color:#111; font-weight:600; }
+label { display:block; font-size:0.9rem; margin:8px 0 4px; color:#374151; }
+input, select, textarea { width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:10px; outline:none; }
+input:focus, select:focus, textarea:focus { border-color:#cbd5e1; box-shadow:0 0 0 3px rgba(212,175,55,0.2); }
+.divider { height:1px; background:#e5e7eb; margin:10px 0; }
+.gallery { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.thumb { width:90px; height:90px; object-fit:cover; border-radius:10px; border:1px solid #e5e7eb; }
+table { font-size: 0.95rem; }
+h1,h2,h3 { margin: 0 0 6px; }
+
+/* ---------- Print-friendly styling ---------- */
+@media print {
+  body { background: #fff; color: #000; }
+  .no-print { display: none !important; }
+  .card { box-shadow: none; border: 1px solid #ddd; }
+  .header { border-bottom: 2px solid #000; padding-bottom: 8px; margin-bottom: 12px; }
+  .print-page { page-break-after: always; }
+  .logo { width: 64px; height: 64px; }
+  .brand-title { font-size: 1.1rem; }
+}
+
+/* Clean PDF helpers */
+.print-wrap { background: #fff; padding: 8px; }
+.print-section { margin-bottom: 12px; }
+.print-title { font-weight: 700; font-size: 1.1rem; }
+.print-sub { color:#444; font-size: 0.9rem; }
